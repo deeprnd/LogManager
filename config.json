@@ -1,0 +1,22 @@
+{
+    "dal": {
+        "CONNECTION_STRING": "mongodb://tester:1q2w3e4r@ds061198.mongolab.com:61198/test_db?w=1",
+        "TIMEOUT": 20000,
+        "INIT_TIMEOUT": 20000
+    },
+    "errors": {
+        "CONNECT_DB": { "code": 2, "message": "Failed to connect to database" },
+        "TIMEOUT": { "code": 14, "message": "Request processing has timed out" }
+    },
+    "logger": {
+        "IS_FILE": false,
+        "IS_LOGGLY": true,
+        "FILE_NAME": "base4.log",
+        "LOGGLY": {
+            "SUBDOMAIN": "aie0",
+            "INPUT_TOKEN": "5414d48f-5e53-4aa1-aff9-93fe59df11d3",
+            "USERNAME": "aie0",
+            "PASSWORD": "1q2w3e4r"
+        }
+    }
+}

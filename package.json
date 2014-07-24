@@ -1,0 +1,37 @@
+{
+  "name": "LogManager",
+  "version": "1.0.0",
+  "description": "LogManager tester",
+  "keywords": [
+    "Node.js",
+    "log"
+  ],
+  "author": {
+    "name": "Victor Genin",
+    "email": "victor.genin@live.com"
+  },
+  "homepage": "https://www.blogger.com/profile/18181421120017234740",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aie0/LogManager"
+  },
+  "engines": {
+    "node": ">= 0.8.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+	  "nconf": ">= 0.6.7",
+	  "node-uuid": ">= 1.4.0",
+	  "express": ">= 3.2.4",
+	  "async": ">= 0.2.8",
+	  "loggly": ">= 0.3.11",
+	  "winston": ">= 0.7.1",
+	  "winston-loggly": ">= 0.6.0",
+	  "moment": ">=2.0.0"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": false,
+  "main": "server.js"
+}
