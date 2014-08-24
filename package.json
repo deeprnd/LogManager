@@ -10,10 +10,10 @@
     "name": "Victor Genin",
     "email": "victor.genin@live.com"
   },
-  "homepage": "https://www.blogger.com/profile/18181421120017234740",
+  "homepage": "http://jsdeepdive.blogspot.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aie0/LogManager"
+    "url": "https://github.com/aie0/LogManager.git"
   },
   "engines": {
     "node": ">= 0.8.0",
@@ -24,10 +24,10 @@
 	  "node-uuid": ">= 1.4.0",
 	  "express": ">= 3.2.4",
 	  "async": ">= 0.2.8",
-	  "loggly": ">= 0.3.11",
 	  "winston": ">= 0.7.1",
-	  "winston-loggly": ">= 0.6.0",
-	  "moment": ">=2.0.0"
+	  "moment": ">=2.0.0",
+    "bunyan": ">=1.0.0",
+    "longjohn": ">=0.2.4"
   },
   "devDependencies": {},
   "bundleDependencies": [],

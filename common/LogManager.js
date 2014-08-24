@@ -81,25 +81,20 @@
     /*
     Initiates LogManager with received settings
      */
-    LogManager.init = function init(settings) {
+    LogManager.init = function init(settings, config) {
+        var longjohn;
+        if (settings.LONG_STACK) {
+            longjohn = require('longjohn');
+            longjohn.async_trace_limit = settings.STACK_LEVEL;
+        }
         if (!logger) {
-            logger = require('winston')
-            if (settings.IS_LOGGLY) {
-                var LOGGLY;
-                require('winston-loggly');
-                LOGGLY = settings.LOGGLY;
-                logger.add(logger.transports.Loggly, {
-                    subdomain: LOGGLY.SUBDOMAIN,
-                    inputToken: LOGGLY.INPUT_TOKEN,
-                    tags: ["NodeJS"],
-                    json: true,
-                    auth: {
-                        username: LOGGLY.USERNAME,
-                        password: LOGGLY.PASSWORD
-                    }
-                });
-            } else if (settings.IS_FILE) {
-                logger.add(logger.transports.File, { filename: settings.FILE_NAME });
+            if (settings.IS_WINSTON) {
+                logger = require('winston', config);
+            } else if (settings.IS_BUNYAN) {
+                config.name = settings.LOG_NAME
+                logger = require('bunyan').createLogger(config);
+            } else {
+                logger = console;
             }
         }
     }
